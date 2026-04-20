@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MA CAFE — THE ARTISANAL ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e7e1df",
+                        "inverse-on-surface": "#f5f0ed",
+                        "surface-container": "#f2edea",
+                        "on-primary-container": "#c19f8e",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#ffa98d",
+                        "on-secondary-fixed": "#390b00",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#e3bfad",
+                        "surface": "#fef8f5",
+                        "tertiary-fixed": "#ffdcbd",
+                        "secondary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#291805",
+                        "background": "#fef8f5",
+                        "surface-dim": "#ded9d6",
+                        "secondary-fixed-dim": "#ffb59d",
+                        "on-surface-variant": "#4f453f",
+                        "on-surface": "#1d1b1a",
+                        "tertiary": "#34220d",
+                        "primary-container": "#4e3629",
+                        "on-background": "#1d1b1a",
+                        "primary-fixed": "#ffdbca",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e7e1df",
+                        "on-secondary-fixed-variant": "#713521",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f8f2f0",
+                        "surface-bright": "#fef8f5",
+                        "tertiary-container": "#4c3721",
+                        "inverse-surface": "#32302e",
+                        "on-primary-fixed": "#2a170c",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#8e4c36",
+                        "outline-variant": "#d3c3bc",
+                        "outline": "#81746e",
+                        "tertiary-fixed-dim": "#e1c1a2",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#74584a",
+                        "on-tertiary-container": "#bea083",
+                        "on-primary-fixed-variant": "#5a4134",
+                        "on-tertiary-fixed-variant": "#59422b",
+                        "on-secondary-container": "#793b26",
+                        "primary": "#362115",
+                        "surface-container-high": "#ede7e4",
+                        "primary-fixed-dim": "#e3bfad"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .serif-brand { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-on-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fef8f5]/80 backdrop-blur-md dark:bg-stone-900/80 shadow-[0_8px_24px_rgba(54,33,21,0.04)]">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif text-[#362115] dark:text-stone-50 uppercase tracking-widest" style="">MA CAFE</div>
+<div class="hidden md:flex gap-10 font-['Noto_Serif'] font-medium tracking-tight">
+<a class="text-[#8e4c36] border-b border-[#8e4c36] pb-1 transition-colors duration-500" href="#home" style=""><br/></a>
+<a class="text-[#362115] dark:text-stone-300 hover:text-[#8e4c36] transition-colors duration-500" href="#about" style=""><br/></a>
+<a class="text-[#362115] dark:text-stone-300 hover:text-[#8e4c36] transition-colors duration-500" href="#menu" style=""><br/></a>
+<a class="text-[#362115] dark:text-stone-300 hover:text-[#8e4c36] transition-colors duration-500" href="#gallery" style=""><br/></a>
+<a class="text-[#362115] dark:text-stone-300 hover:text-[#8e4c36] transition-colors duration-500" href="#contact" style=""><br/></a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-label text-sm uppercase tracking-widest hover:bg-secondary transition-all duration-500" href="#contact" style="">Visit Us</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<img alt="Cafe Interior" class="w-full h-full object-cover" data-alt="Interior of a premium minimalist cafe with warm soft lighting, wooden furniture, and marble tabletops at golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo2mwlIz2yP-EhwMM-AtKSHxbwn65e0BuN-gXBr6GoiCtQcvl_LLustZwRYWPeEPSjlNT9DZzhpKh9bAis8S1iglBuoQuFru6e39EHhhShXi-du0hUanJAjIFBAFr8kb2cg4S7zU2UV5KERXMSgMizt7FFVC0IfESeXOnZK4xBfjgqXd_g7-_s7P-y45nfhDxeMv_285eeKuYL0cGJpzRi9DvNriz8Z76ihChOyVAiHx2iAhad5qzn4Ta5TCNVTE0eefAJGw0wY_co" style=""/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<h1 class="text-7xl md:text-9xl text-white font-bold tracking-tighter mb-6 drop-shadow-sm" style="">MA CAFE</h1>
+<p class="text-xl md:text-2xl text-white/90 font-body max-w-2xl mx-auto tracking-wide leading-relaxed" style="">
+                A Handcrafted Coffee Experience in the Heart of Fredericton.
+            </p>
+<div class="mt-12 flex justify-center gap-6">
+<a class="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-xl font-label tracking-widest uppercase hover:bg-white/20 transition-all duration-500" href="#menu" style="">Explore Menu</a>
+</div>
+</div>
+</header>
+<!-- About Section: The Art of the Roast -->
+<section class="py-32 px-12 bg-surface" id="about">
+<div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-lg">
+<img alt="Artisanal Latte with Heart Art" class="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" data-alt="Close-up of a professional barista pouring steaming water into a coffee dripper with soft natural morning light" src="https://lh3.googleusercontent.com/aida/ADBb0ujEZQ7AGqQj2wNP__Pp2bTl4UrfEds0b2lmWvJNsvJxN1N4Ef-LzEwpMT3qhhyH5Ia6PFdPcLHPxx-KFG2LG5mNoRhS0kYTO4OPQEEXnfUdyJNDpo09ex8eGtMmPYxyBBSnHnow1WhDENVFqp1wFpumfmr2PtXI35aRA-v89_ikk-vhUOaec2QQ_75cdZPcBOHrWtNrIP6H5qkQUFS6gt2Gea8cp8I9f4eh5TDjXM7W-PC2-90ohETrX8aP2K4lKklAPrLMtTdr8g" style=""/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-surface-container p-4 hidden lg:block">
+<img alt="Fresh Pastries" class="w-full h-full object-cover" data-alt="Macro shot of a flaky golden brown artisanal croissant on a ceramic plate with soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnOWKcyNCbg-0qPFmHTazZNTRy11-b1vhBW0f14ZG4gXwO3IGagWFEdIO_RwuwrCT9BlnxjsPMjJp4RQPRS0JGbA-ikPyYlsY_-AtkMa22F1PZsFPlkY05XvbFLR-xSiwyPRAIcSvovsDC2-r7bThQyQeudJqGZhiqTaTSJxOhp8MTvdMiOEHZC_1kaCJAEobwbqUpX9mmLnk4z9P6w_m1rmDB8eyiY7JBv_bN7qDgBv6n4E38X9PMjuw7iwcb3HHFdB_zHnKIeggh" style=""/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary font-label tracking-[0.2em] uppercase text-sm mb-6 block" style="">The Archive</span>
+<h2 class="text-5xl md:text-6xl text-primary font-bold mb-8 leading-tight tracking-tight" style="">The Art of <br/>the Roast.</h2>
+<div class="space-y-6 text-on-surface-variant font-body leading-relaxed text-lg max-w-lg">
+<p class="" style="">MA CAFE is a sanctuary for the senses, nestled in the historic pulse of Fredericton. Our space is more than a destination; it's a digital and physical editorial experience that mirrors the tactile nature of specialty brewing.</p>
+<p class="" style="">We embrace intentional asymmetry and expansive whitespace. Our roasts are curated like a high-end coffee table book—slow, deliberate, and exceptionally refined.</p>
+<p class="" style="">From our specialty pour-overs to the morning's first handcrafted pastry, every moment at MA CAFE is an artisanal archive of taste.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Menu -->
+<section class="py-32 px-12 bg-surface-container-low" id="menu">
+<div class="max-w-screen-xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-5xl text-primary font-bold mb-4 tracking-tight" style="">The Sensory Menu</h2>
+<p class="text-on-surface-variant font-body tracking-wide" style="">A curated selection of artisanal roasts and handcrafted delights.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+<!-- Drinkies -->
+<div>
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4 mb-8">
+<h3 class="text-2xl text-secondary font-headline uppercase tracking-widest" style="">Drinkies</h3>
+<div class="flex gap-4 font-headline text-secondary">
+<span class="w-10 text-right" style="">M</span>
+<span class="w-10 text-right" style="">L</span>
+</div>
+</div>
+<ul class="space-y-5">
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Americano</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$5.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Aerocano</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$5.5</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Con Pana/Cortado</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$5.5</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Cubano</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$5.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Romano</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Latte</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.0</span>
+<span class="w-10 text-right" style="">$6.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Flat White</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.0</span>
+<span class="w-10 text-right" style="">$6.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Cappuccino</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.0</span>
+<span class="w-10 text-right" style="">$6.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Caramel Macchiato</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$7.0</span>
+<span class="w-10 text-right" style="">$7.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Mocha</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$7.0</span>
+<span class="w-10 text-right" style="">$7.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">French Toast Latte</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$8.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Matcha Latte</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$8.0</span>
+<span class="w-10 text-right" style="">$9.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Strawberry Matcha</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$12.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Matcha Graced</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$11.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Iced Matcha</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$9.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Iced Coffee</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$4.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Coffee</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$2.5</span>
+<span class="w-10 text-right" style="">$3.0</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Teas -->
+<div>
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4 mb-8">
+<h3 class="text-2xl text-secondary font-headline uppercase tracking-widest" style="">Teas</h3>
+<div class="flex gap-4 font-headline text-secondary">
+<span class="w-10 text-right" style="">M</span>
+<span class="w-10 text-right" style="">L</span>
+</div>
+</div>
+<ul class="space-y-5">
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Black Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$2.0</span>
+<span class="w-10 text-right" style="">$3.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Green Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$4.0</span>
+<span class="w-10 text-right" style="">$5.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Matcha Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$7.0</span>
+<span class="w-10 text-right" style="">$7.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Iranian Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$7.0</span>
+<span class="w-10 text-right" style="">$7.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Peppermint Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$4.0</span>
+<span class="w-10 text-right" style="">$5.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Masala Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.5</span>
+<span class="w-10 text-right" style="">$7.5</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Saffron Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$5.0</span>
+<span class="w-10 text-right" style="">$6.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Tea Latte</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$6.0</span>
+<span class="w-10 text-right" style="">$7.0</span>
+</div>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Iced Tea</span>
+<div class="flex gap-4 font-headline text-primary">
+<span class="w-10 text-right" style="">$4.0</span>
+<span class="w-10 text-right"></span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Eaties, Beers & Add-ons -->
+<div class="flex flex-col gap-12">
+<div>
+<h3 class="text-2xl text-secondary font-headline uppercase tracking-widest border-b border-outline-variant/30 pb-4 mb-8" style="">Eaties</h3>
+<ul class="space-y-5">
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Chicken Ceasar Salad</span>
+<span class="font-headline text-primary" style="">$15.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Iranian Omelette</span>
+<span class="font-headline text-primary" style="">$13.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Cheese Bite</span>
+<span class="font-headline text-primary" style="">$7.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Turkey Croissant</span>
+<span class="font-headline text-primary" style="">$13.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Butter Omelette</span>
+<span class="font-headline text-primary" style="">$10.00</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-2xl text-secondary font-headline uppercase tracking-widest border-b border-outline-variant/30 pb-4 mb-8" style="">Beers</h3>
+<ul class="space-y-5">
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">16 OZ</span>
+<span class="font-headline text-primary" style="">$9.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">20 OZ</span>
+<span class="font-headline text-primary" style="">$10.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Shandy</span>
+<span class="font-headline text-primary" style="">$11.00</span>
+</li>
+<li class="flex justify-between items-baseline gap-4" style="">
+<span class="text-lg font-headline text-primary flex-1" style="">Joy</span>
+<span class="font-headline text-primary" style="">$12.00</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-outline-variant/20 shadow-sm">
+<h3 class="text-lg text-secondary font-headline uppercase tracking-widest mb-4" style="">Add-ons</h3>
+<ul class="space-y-3 font-body text-on-surface-variant">
+<li class="" style="">• Add Flavour for $1</li>
+<li class="" style="">• Make it Iced for $1</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery: Asymmetric Bento Grid -->
+<section class="py-32 bg-surface overflow-hidden" id="gallery">
+<div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-12 grid-rows-2 gap-4 lg:gap-8 h-[1200px] lg:h-[800px]">
+<div class="col-span-12 lg:col-span-8 row-span-1 group relative overflow-hidden">
+<img alt="Coffee and blueberry scone on a rustic green wooden table" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugeVED96BBgAaKkoYUJh5FmEDizgoUwKHv4eoTnUZHhoqRYLWrfBdNROa3QOm_X3o4JcmpvaQ9_MGt5r_M25hTgQSVm7rGx9gy6MFFhmDxYzJfmzkXRou6DZuAxE-t3WCk9OEaN7co8Y4gH4tmu6lnS1Pn0chPk3Zqc3IPfdV-zLrG0xf54lbxaW8b6GNaL4Rii1wCRxPsptZfWvQQ_rP378ecbVpo-ZXjvHMdhKyWAZfzSvMVYRvElCL7PwEJUihp81lW8UZIWZA" style=""/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<div class="col-span-6 lg:col-span-4 row-span-1 group relative overflow-hidden">
+<img alt="Latte Art" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up of perfect latte art in a ceramic cup on a wooden table with soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGij6f9WQ-xSV-EcPq7aqTw8IKP9CzrwO-u5FDBXtAhlynN6QkVhiZvXx1tdymZHEVp0OF2skigJTfMV4fiPZLcMUS2clrKs9N2JzKntIQAaCMK4U0NrzXurqByFdieJ-LV-hnhxdV_YVyzU7B0YKGZa_QKOBF7LVNNCRQyEl-mLJGWtRsfuoZ4YsMD39XRe4nLefrXvuQtGb7zNVYIW8hcnZf5KoJmielsi03hGpgGSLqzUMSnpcPjPBkpBxTcHvyXzFD10UMCDFg" style=""/>
+</div>
+<div class="col-span-6 lg:col-span-3 row-span-1 group relative overflow-hidden">
+<img alt="Layered Iced Coffee" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A tall glass of layered iced coffee with a clear distinction between the dark coffee on top and creamy white milk at the bottom, featuring the Ma Cafe logo on the glass." src="https://lh3.googleusercontent.com/aida/ADBb0uj40GbBpUTQfVVt3wLcbebfpdhW0kVEG1-akCCWIPzkw5bWIdcapWlWgNGkShzHfv4Epmg0y9hrooSm3K7uKSlqn7-fKnCSY1y32poYcv6jHNhiTSH3fP_2BmrU7CtTWoPTD4309dRwu4oZUH_bjMHv47GALdfzICfLtb4LYMesWIiTZMHmi_X97FAs5X-q3PhPGIq_XYJJLRilaYFeffpxgTbA7l7f_gTKMkCEwbrDeP7eD4GjNb9rfY1IP1kCaiEX-i5N6fmJWJ8" style=""/>
+</div>
+<div class="col-span-12 lg:col-span-9 row-span-1 group relative overflow-hidden">
+<img alt="Pastry Display" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up of a delicious croissant sandwich with ham, cheese, and fresh greens on a plate, with a coffee in the background." src="https://lh3.googleusercontent.com/aida/ADBb0ugKYNWqfEG7Yh1657LaAo5u1Llwk7J4Hy_aTymOrOuMyLAu1DdO69LU_ekBwV2l6OgQ4CuVYOrUo7k5F0_a2oRI56amOmYwlk7HBmRRodC_kP06yD2J5IxHNgLieDISjTGooRXQh2R8vgVBXOgztmz5aLyqwSU_a_Ucvr2IWpBLKIxC7ZPi2SF6KK82U-MmH200qup6HpWSY-1EOTVvvuFeChk1yEu2_dAdf8x5qAZ_GN5DtN_xv8fBbBisA2kSNsA8_8dYD65Bcyw" style=""/>
+<div class="absolute bottom-8 left-8 bg-surface/70 backdrop-blur-xl p-8 max-w-sm hidden lg:block">
+<h4 class="text-2xl font-headline text-primary mb-2 italic" style="">A Moment of Stillness.</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed" style="">The Archive is updated daily with fresh inspirations and handcrafted batches.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 px-12 bg-surface-container-low">
+<div class="max-w-screen-xl mx-auto">
+<h2 class="text-4xl text-primary font-bold text-center mb-20 tracking-tight" style="">Kind Words from Our Locals.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bg-surface p-12 shadow-[0_8px_24px_rgba(54,33,21,0.04)] rounded-lg">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="text-on-surface-variant font-body italic text-lg leading-relaxed mb-8" style="">"Easily the best coffee in Fredericton. The atmosphere is so calm and curated, it's my favorite place to write."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<span class="font-label text-primary text-sm uppercase tracking-widest font-bold" style="">Sarah J.</span>
+</div>
+</div>
+<div class="bg-surface p-12 shadow-[0_8px_24px_rgba(54,33,21,0.04)] rounded-lg">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="text-on-surface-variant font-body italic text-lg leading-relaxed mb-8" style="">"The croissants are life-changing. You can tell everything here is made with incredible attention to detail."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-on-primary-container"></div>
+<span class="font-label text-primary text-sm uppercase tracking-widest font-bold" style="">Mark T.</span>
+</div>
+</div>
+<div class="bg-surface p-12 shadow-[0_8px_24px_rgba(54,33,21,0.04)] rounded-lg">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="text-on-surface-variant font-body italic text-lg leading-relaxed mb-8" style="">"A true artisanal gem. Their Matcha is prepared exactly right. Can't recommend this place enough."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-outline-variant"></div>
+<span class="font-label text-primary text-sm uppercase tracking-widest font-bold" style="">Elena R.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Hours -->
+<section class="py-32 px-12 bg-surface" id="contact">
+<div class="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-20">
+<div class="lg:w-1/2">
+<h2 class="text-5xl text-primary font-bold mb-12 tracking-tight" style="">Find Your Place <br/>at Our Table.</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary mt-1" style="">location_on</span>
+<div>
+<h4 class="font-label font-bold text-primary uppercase tracking-widest mb-2" style="">Location</h4>
+<p class="text-on-surface-variant text-lg" style="">469 King St, Fredericton, NB</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary mt-1" style="">schedule</span>
+<div>
+<h4 class="font-label font-bold text-primary uppercase tracking-widest mb-2" style="">Hours</h4>
+<div class="text-on-surface-variant text-lg space-y-1">
+<p class="" style="">Mon — Fri: 7:00 AM — 6:00 PM</p>
+<p class="" style="">Saturday: 8:00 AM — 5:00 PM</p>
+<p class="" style="">Sunday: 9:00 AM — 4:00 PM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary mt-1" style="">call</span>
+<div>
+<h4 class="font-label font-bold text-primary uppercase tracking-widest mb-2" style="">Call</h4>
+<p class="text-on-surface-variant text-lg" style="">+1 506-472-1236</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="w-full aspect-square lg:aspect-auto h-full min-h-[400px] bg-surface-container overflow-hidden rounded-lg relative">
+<!-- Map Placeholder with Visual Style -->
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-multiply">
+<img alt="Map Texture" class="w-full h-full object-cover" data-alt="Stylized overhead view of an urban street map with soft earth tones and elegant typography labels" data-location="Fredericton" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaAkv6kN3-6pR9HRX7BIpZVYMNJS_uNglqMCVvOn5nhnbruGUgXpVef6rgRBGrE0I0YR15tsLFsofbo46hlr9KNO1Arbht4TIl6pAEfOcungl3khPS3XtLhX6cW_Enr_JpTTz4KjVfhfKaR7Y9jXQaRCjKz_TyQbvz-Y4SGr0MG78QXqtoSU236czfoPiJCtrpJO8Cxgtm63ib9F2G3yKpuOZBar-PY7T1r__nrb1ZxWE2ickUZKA2u_AXtiGycznomfWc4BTRoCE0" style=""/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="bg-surface p-12 text-center shadow-xl max-w-sm">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" style='font-variation-settings: "FILL" 1;'>location_on</span>
+<h3 class="text-xl font-headline text-primary mb-4" style="">The Archive is here.</h3>
+<p class="text-sm text-on-surface-variant mb-6 uppercase tracking-widest" style="">469 King St, Fredericton</p>
+<a class="text-secondary font-label font-bold text-sm underline underline-offset-8 uppercase tracking-widest" href="#" style="">Open in Maps</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-[#362115]/5 bg-[#fef8f5] dark:bg-stone-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-serif italic text-lg text-[#362115] dark:text-stone-50 tracking-widest uppercase" style="">MA CAFE</div>
+<div class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#362115]/60 dark:text-stone-500 uppercase" style="">
+                    © 2026 MA CAFE — THE ARTISANAL ARCHIVE.
+                </div>
+</div>
+<div class="flex gap-10 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-[#362115]/60 dark:text-stone-500 hover:text-[#8e4c36] transition-opacity duration-300 uppercase tracking-widest" href="#" style="">Instagram</a>
+<a class="text-[#362115]/60 dark:text-stone-500 hover:text-[#8e4c36] transition-opacity duration-300 uppercase tracking-widest" href="#" style="">FACEFOOK</a>
+<a class="text-[#362115]/60 dark:text-stone-500 hover:text-[#8e4c36] transition-opacity duration-300 uppercase tracking-widest" href="#" style=""><br/></a>
+<a class="text-[#362115]/60 dark:text-stone-500 hover:text-[#8e4c36] transition-opacity duration-300 uppercase tracking-widest" href="#" style=""><br/></a>
+</div>
+</div>
+</footer>
+</body></html>
